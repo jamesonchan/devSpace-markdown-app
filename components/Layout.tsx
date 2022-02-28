@@ -3,6 +3,7 @@ import Head from "next/head";
 import React from "react";
 import { LayoutProps } from "..";
 import Header from "./Header";
+import Search from "./Search";
 
 const Layout: NextPage<LayoutProps> = ({
   children,
@@ -20,6 +21,7 @@ const Layout: NextPage<LayoutProps> = ({
       </Head>
 
       <Header />
+      <Search />
 
       <main className="container mx-auto my-7">{children}</main>
     </div>

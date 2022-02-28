@@ -19,7 +19,8 @@ export interface PostsProps {
   frontmatter: FrontmatterProps;
 }
 
-export interface Pages{
+
+export interface Pages {
   numPages: number;
   currentPage: number;
-};
+}

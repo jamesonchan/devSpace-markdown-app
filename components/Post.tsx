@@ -5,7 +5,7 @@ import React from "react";
 import { PostsProps } from "..";
 import CategoryLabel from "./CategoryLabel";
 
-const Post: NextPage<{ post: PostsProps; compact: boolean }> = ({
+const Post: NextPage<{ post: PostsProps; compact?: boolean }> = ({
   post,
   compact,
 }) => {

@@ -10,12 +10,13 @@ export default function handler(
   let posts;
   if (process.env.NODE_ENV === "production") {
     // fetch from cache
+    posts = require("../../cache/data").posts;
   } else {
     posts = getPosts();
   }
 
   const results = posts?.filter(
-    ({ frontmatter: { title, excerpt, category } }) =>
+    ({ frontmatter: { title, excerpt, category } }: any) =>
       title.toLowerCase().indexOf(req.query.q) != -1 ||
       excerpt.toLowerCase().indexOf(req.query.q) != -1 ||
       category.toLowerCase().indexOf(req.query.q) != -1
